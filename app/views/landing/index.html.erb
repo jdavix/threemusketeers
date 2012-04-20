@@ -1,5 +1,31 @@
-<h1>Let start it, please add three twitter usernames</h1>
-<form class="well">
-  <input type="text" />
-  <input type="text" />
+<h3>Let start it, please add three twitter usernames</h3>
+<form class="well form-vertical">
+  <fieldset>
+    <input type="text" id="username" />
+  </fieldset>
+  <button class="btn btn-primary" type="button" id="add-ids">ADD</button>
 </form>
+<div id="game-content">
+  <%= form_tag(find_updates_landing_index_path, :remote => true, :id=>"get-updates-form") do %>
+    <div id="twitter-ids">
+      <ul>
+      </ul>
+    </div>
+    <%= submit_tag "Give me his updates", :id => "show-updates", :class => "btn hide"%>
+  <% end %>
+</div>
+<div id="spinner"></div>
+<div id="table-content" class="hide">
+  <p>You can add more tweets in the result below changing the usernames in the list.</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Tweet</th>
+        <th>Username</th>
+        <th>Created at</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>

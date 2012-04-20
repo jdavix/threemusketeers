@@ -1,0 +1,6 @@
+var updates_as_html = "<%= escape_javascript(render 'updates') %>";
+$('#table-content table tbody').html("");
+$('#table-content table tbody').append($(updates_as_html));
+$('#table-content').show();
+$('#show-updates').val("Refresh it with the latest!");
+$('#show-updates').attr('class', 'btn btn-primary');

@@ -1,0 +1,7 @@
+<% @updates.each do |update| %>
+    <tr>
+        <td><p><%= update.content %><p></td>
+        <td><%= update.username %></td>
+        <td><%= update.twitter_created_at %></td>
+    </tr>
+<% end %>

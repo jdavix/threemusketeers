@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>Threemusketeers</title>
-  <%= stylesheet_link_tag    "bootstrap/css/bootsrap.css" %>
-  <%= stylesheet_link_tag    "bootstrap/css/bootstrap-responsive.css" %>
-  <%= javascript_include_tag "application" %>
+  <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <%= stylesheet_link_tag    "application" %>
+  <link href="/assets/bootstraop/css/bootstrap-responsive.css" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,4 +12,5 @@
     <%= yield %>
   </div>
 </body>
+  <%= javascript_include_tag "application" %>
 </html>

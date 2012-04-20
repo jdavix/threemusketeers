@@ -6,11 +6,12 @@ gem 'rails', '3.1.3'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'json'
-
+gem 'twitter', '2.2.2'
 # Gems used only for assets and not required
 # in production environments by default.
 group :development do
   gem 'sqlite3'
+  gem 'ruby-debug'
 end
 gem 'pg'
 group :assets do

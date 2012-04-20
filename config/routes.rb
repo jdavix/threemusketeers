@@ -38,7 +38,11 @@ Threemusketeers::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-
+   resources :landing, :only => [:index] do
+    collection do
+      post 'find_updates'
+    end
+   end
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
