@@ -3,7 +3,7 @@ class LandingController < ApplicationController
   end
 
   def find_updates
-    Update.store_tweets!(params[:usernames])
+    Update.store_tweets!(params)
     @updates = Update.order('twitter_created_at DESC')
     respond_to do |format|
       format.js
