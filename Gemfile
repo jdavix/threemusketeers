@@ -19,6 +19,7 @@ group :assets do
 end
 
 group :production do
+  gem 'pg'
 end
 
 gem 'jquery-rails'
