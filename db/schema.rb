@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20120420205054) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "twitter_id"
+    t.string   "twitter_id"
   end
 
 end

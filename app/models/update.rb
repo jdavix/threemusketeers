@@ -9,7 +9,7 @@ class Update < ActiveRecord::Base
           latest_update = Update.where("username = ?", update.username).order('twitter_created_at DESC').limit(1).first
           params[:usernames].delete(update.username.to_sym)
           #getting only the latest tweets since the latest twitter id stored for each username
-          twitter_updates = Twitter.user_timeline(update.username, :since_id => latest_update.twitter_id)
+          twitter_updates = Twitter.user_timeline(update.username, :since_id => latest_update.twitter_id.to_i)
           twitter_updates.each do |tweet|
             Update.new({:twitter_created_at => tweet.created_at.utc.strftime("%Y-%m-%d %H:%M:%s"), :content => tweet.text, :username => tweet.user.screen_name.downcase, :twitter_id => tweet.id}).save
           end
