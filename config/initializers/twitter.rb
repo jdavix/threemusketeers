@@ -1,4 +1,4 @@
 Twitter.configure do |config|
-  config.consumer_key = '0PgUcrxZq8TjaJZ3zcfLw'
-  config.consumer_secret = 'wVeUtfBp37TYAngdEOI5KzQpSaG8NovE2AV7gLFlR8s'
+  config.consumer_key = 'MLC24rwjz5o6q8VyO1WXg'
+  config.consumer_secret = 'knJqxmQ6WyEISihcLTbQcUJXIdDyvTjMz5U7kJnOLQ'
 end
